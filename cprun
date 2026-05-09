@@ -1,0 +1,7 @@
+if [ "$1" = "-b" ]; then
+    file="$2"
+    g++ -o "$file" "$file.cpp" && ./"$file"
+else
+    file="$1"
+    g++ -o "$file" "$file.cpp" && ./"$file" && rm ./"$file"
+fi

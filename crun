@@ -1,0 +1,7 @@
+if [ "$1" = "-b" ]; then
+    file="$2"
+    gcc -o "$file" "$file.c" && ./"$file"
+else
+    file="$1"
+    gcc -o "$file" "$file.c" && ./"$file" && rm ./"$file"
+fi
