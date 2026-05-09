@@ -1,4 +1,5 @@
 #!/bin/zsh
+# description: Markdown to PDF via Chrome
 
 if [ -z "$1" ]; then
   echo "Usage: md <file.md>"

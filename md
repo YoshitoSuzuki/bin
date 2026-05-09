@@ -1,4 +1,5 @@
 #!/bin/zsh
+# description: Markdown to HTML preview (cached)
 
 if [ -z "$1" ]; then
   echo "Usage: md <file.md>"
