@@ -1,10 +1,11 @@
 #!/bin/zsh
 # description: compile and run a C file quickly
-
 if [ "$1" = "-b" ]; then
-    file="$2"
-    gcc -o "$file" "$file.c" && ./"$file"
+    src="$2"
+    file="${src%.cpp}"
+    g++ -o "$file" "$src" && ./"$file"
 else
-    file="$1"
-    gcc -o "$file" "$file.c" && ./"$file" && rm ./"$file"
+    src="$1"
+    file="${src%.cpp}"
+    g++ -o "$file" "$src" && ./"$file" && rm ./"$file"
 fi

@@ -1,7 +1,11 @@
+#!/bin/zsh
+# description: compile and run a c++ file quickly
 if [ "$1" = "-b" ]; then
-    file="$2"
-    g++ -o "$file" "$file.cpp" && ./"$file"
+    src="$2"
+    file="${src%.cpp}"
+    g++ -o "$file" "$src" && ./"$file"
 else
-    file="$1"
-    g++ -o "$file" "$file.cpp" && ./"$file" && rm ./"$file"
+    src="$1"
+    file="${src%.cpp}"
+    g++ -o "$file" "$src" && ./"$file" && rm ./"$file"
 fi
